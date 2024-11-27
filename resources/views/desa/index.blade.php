@@ -38,10 +38,15 @@
                                     </td>
                                     <td class="d-flex justify-align-center">
                                         <div>
-                                            <a href="" class="btn btn-warning">Edit</a>
+                                            <a href="{{ route('desa.edit', $item->id) }}" class="btn btn-warning">Edit</a>
                                         </div>
                                         <div>
-                                            <a href="{{ route("desa.destroy", $item->id) }}" class="btn btn-danger l-2">Hapus</a>
+                                            <form action="{{ route('desa.destroy', $item->id) }}" method="POST" style="display: inline;">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this item?');">Delete</button>
+                                            </form>
+                                            {{-- <a href="{{ route('desa.destroy', [ 'id' => $item->id]) }}" class="btn btn-danger l-2">Hapus</a> --}}
                                         </div>
                                     </td>
                                 </tr>

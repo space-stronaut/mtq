@@ -50,7 +50,9 @@ class DesaController extends Controller
      */
     public function show($id)
     {
-        //
+        $desa = Desa::find($id);
+
+        return view("desa.edit", compact('desa'));
     }
 
     /**
@@ -61,7 +63,9 @@ class DesaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $desa = Desa::find($id);
+
+        return view("desa.edit", compact('desa'));
     }
 
     /**
@@ -73,7 +77,9 @@ class DesaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Desa::find($id)->update($request->all());
+
+        return redirect()->route("desa.index");
     }
 
     /**
@@ -84,8 +90,8 @@ class DesaController extends Controller
      */
     public function destroy($id)
     {
-        // Desa::;
+        Desa::find($id)->delete();
 
-        return redirect()->back();
+        return redirect()->route("desa.index");
     }
 }
