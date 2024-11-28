@@ -39,7 +39,8 @@ class DesaController extends Controller
     {
         Desa::create($request->all());
 
-        return redirect()->route('desa.index');
+        return redirect()->route('desa.index')
+        ->with('success', 'Data created successfully.');
     }
 
     /**
@@ -79,7 +80,8 @@ class DesaController extends Controller
     {
         Desa::find($id)->update($request->all());
 
-        return redirect()->route("desa.index");
+        return redirect()->route("desa.index")
+        ->with('success', 'Data edited successfully.');
     }
 
     /**
