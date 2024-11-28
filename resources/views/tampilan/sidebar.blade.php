@@ -53,9 +53,17 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ route('desa.index')}}" class="nav-link {{ (request()->is('desa*')) ? 'active' : '' }}" class="nav-link">
+                <a href="{{ route('desa.index')}}" class="nav-link {{ (request()->is('desa*')) ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Desa</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Data Peserta</p>
                 </a>
               </li>
             </ul>
