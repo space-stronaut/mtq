@@ -94,6 +94,7 @@ class DesaController extends Controller
     {
         Desa::find($id)->delete();
 
-        return redirect()->route("desa.index");
+        return redirect()->route("desa.index")
+        ->with('success', 'Data deleted successfully.');;
     }
 }
