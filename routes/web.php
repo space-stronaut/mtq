@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DesaController;
+use App\Http\Controllers\ListpesertaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource("desa", DesaController::class)->middleware(['auth']);
+Route::resource("listpeserta", ListpesertaController::class)->middleware(['auth']);
