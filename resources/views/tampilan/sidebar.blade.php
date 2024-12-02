@@ -44,25 +44,63 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('desa.index')}}" class="nav-link {{ (request()->is('desa*')) ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Data Desa</p>
+                <a href="#" class="nav-link">
+                  <i class="nav-icon far fa-id-card"></i>
+                  <p>
+                    Data Master
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
                 </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{ route('desa.index')}}" class="nav-link {{ (request()->is('desa*')) ? 'active' : '' }}">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Data Desa</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Golongan</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>No. Cabang</p>
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li class="nav-item">
-                <a href="{{ route('listpeserta.index')}}" class="nav-link {{ (request()->is('listpeserta*')) ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List Peserta</p>
+                <a href="#" class="nav-link">
+                  <i class="nav-icon far fa-id-card"></i>
+                  <p>
+                    Pendaftaran
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
                 </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Form Daftar</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Verifikasi Pendaftar</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ route('listpeserta.index')}}" class="nav-link {{ (request()->is('listpeserta*')) ? 'active' : '' }}">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>List Peserta</p>
+                    </a>
+                  </li>
+                </ul>
               </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Pendaftaran
-              </p>
-            </a>
-          </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -76,7 +114,7 @@
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-id-card"></i>
               <p>
-                Profil Pengguna
+                User/ Pengguna
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -84,7 +122,13 @@
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Profil</p>
+                  <p>Profil Pengguna</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Pengguna</p>
                 </a>
               </li>
             </ul>
