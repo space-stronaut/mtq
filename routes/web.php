@@ -24,4 +24,3 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource("desa", DesaController::class)->middleware(['auth']);
-Route::resource("listpeserta", ListpesertaController::class)->middleware(['auth']);

@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Listpeserta;
 use Illuminate\Http\Request;
-use PhpParser\Node\Stmt\Return_;
 
-class ListpesertaController extends Controller
+class golonganController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +13,7 @@ class ListpesertaController extends Controller
      */
     public function index()
     {
-        $listpesertas= Listpeserta::all();
-        return view("listpeserta.index", compact('listpesertas'));
+        //
     }
 
     /**
